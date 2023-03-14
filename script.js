@@ -10,6 +10,6 @@ const multiply = function(a,b) {
     return a * b;
 }
 
-const divid = function(a,b) {
+const divide = function(a,b) {
     return a / b;
 }
