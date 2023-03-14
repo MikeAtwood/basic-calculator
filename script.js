@@ -15,5 +15,5 @@ const divide = function(a,b) {
 }
 
 const operate = () => {
-
+    
 }
