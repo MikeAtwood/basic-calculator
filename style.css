@@ -1,5 +1,8 @@
 body {
+    display: flex;
     background-color: rgb(47, 47, 47);
+    align-items: center;
+    justify-content: center;
 }
 
 .buttons-grid {
@@ -9,32 +12,59 @@ body {
 }
 
 .screen {
-    padding: 20px;
-    border: 2px #333;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    text-align: right;
-    background-color: #eee;
+    width: 300px;
+    border: 1px solid salmon;
+    height: 75px;
+    margin: 15px;
 }
 
 .top-row {
-    display: grid;
-    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
 }
 
 .btn {
-    width: auto;
-    height: 50px;
+    width: 75px;
+    height: 75px;
+    margin: 15px;
+    font-size: 40px;
+}
+
+.number {
+    border: 1px solid greenyellow;
+    border-radius: 10px;
+}
+
+.operator {
+    border: 1px solid steelblue;
+    border-radius: 10px;
+}
+
+.decimal {
+    border: 1px solid gold;
+    border-radius: 10px;
+}
+
+.equal {
+    border: 1px solid pink;
+    border-radius: 10px;
 }
 
 .clear {
-    height: 50px;
+    border: 1px solid violet;
+    border-radius: 10px;
+}
+
+.clear {
+    border: 1px solid violet;
 }
 
 .calculator {
-    width: 400px;
+    width: 450px;
     border: 15px #333 solid;
     border-radius: 15px;
     padding: 20px;
-    background-color: rgb(0, 0, 156);
+    margin-top: 10px;
 }
