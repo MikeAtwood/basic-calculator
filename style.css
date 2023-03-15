@@ -11,13 +11,6 @@ body {
     grid-gap: 10px;
 }
 
-.screen {
-    width: 300px;
-    border: 1px solid salmon;
-    height: 75px;
-    margin: 15px;
-}
-
 .top-row {
     display: flex;
     justify-content: center;
@@ -83,4 +76,27 @@ body {
     border-radius: 15px;
     padding: 20px;
     margin-top: 10px;
+}
+
+.screen {
+    width: 300px;
+    border: 1px solid salmon;
+    height: 75px;
+    margin: 15px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-right: 5px;
+}
+
+.previous {
+    font-size: 20px;
+    color: white;
+}
+
+.current {
+    font-size: 30px;
+    color: white;
 }
