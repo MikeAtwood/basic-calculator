@@ -18,7 +18,17 @@ numberBtn.forEach((number) => number.addEventListener("click", function(e) {
 
 operatorBtn.forEach((op) => op.addEventListener("click", function(e) {
     handleOperator(e.target.textContent)
+    previousScreen.textContent = previousValue + ' ' + operator;
+    currentScreen.textContent = currentValue;
 }))
+
+clearBtn.addEventListener("click", function() {
+    previousValue = '';
+    currentValue = '';
+    operator = '';
+    previousScreen.textContent = currentValue;
+    currentScreen.textContent = currentValue;
+})
 
 
 function handleNumber(num) {
@@ -28,7 +38,9 @@ function handleNumber(num) {
 }
 
 function handleOperator(op) {
-    console.log(op)
+    operator = op;
+    previousValue = currentValue;
+    currentValue = '';
 }
 
 
