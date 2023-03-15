@@ -11,18 +11,18 @@ const previousScreen = document.querySelector(".previous")
 const currentScreen = document.querySelector(".current")
 
 // Event Handlers
-numberBtn.forEach((number) => number.addEventListener("click", function(e) {
+numberBtn.forEach((number) => number.addEventListener("click", function (e) {
     handleNumber(e.target.textContent)
     currentScreen.textContent = currentValue;
 }))
 
-operatorBtn.forEach((op) => op.addEventListener("click", function(e) {
+operatorBtn.forEach((op) => op.addEventListener("click", function (e) {
     handleOperator(e.target.textContent)
     previousScreen.textContent = previousValue + ' ' + operator;
     currentScreen.textContent = currentValue;
 }))
 
-clearBtn.addEventListener("click", function() {
+clearBtn.addEventListener("click", function () {
     previousValue = '';
     currentValue = '';
     operator = '';
@@ -30,16 +30,22 @@ clearBtn.addEventListener("click", function() {
     currentScreen.textContent = currentValue;
 })
 
-equalBtn.addEventListener("click", function() {
-    calculate()
-    previousScreen.textContent = '';
-    currentScreen.textContent = previousValue;
+equalBtn.addEventListener("click", function () {
+    if (currentValue != '' && previousValue != '') {
+        calculate()
+        previousScreen.textContent = '';
+        if (previousValue.length <= 5) {
+            currentScreen.textContent = previousValue;
+        } else {
+            currentScreen.textContent = previousValue.slice(0, 5) + "...";
+        }
+    }
 })
 
 
 function handleNumber(num) {
-    if(currentValue.length <= 11) {
-    currentValue += num;
+    if (currentValue.length <= 11) {
+        currentValue += num;
     }
 }
 
@@ -53,11 +59,11 @@ function calculate() {
     previousValue = Number(previousValue)
     currentValue = Number(currentValue)
 
-    if(operator === "+") {
+    if (operator === "+") {
         previousValue += currentValue
-    } else if(operator === "-") {
+    } else if (operator === "-") {
         previousValue -= currentValue
-    } else if(operator === "/") {
+    } else if (operator === "/") {
         previousValue /= currentValue
     } else {
         previousValue *= currentValue
