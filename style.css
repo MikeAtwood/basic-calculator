@@ -33,32 +33,48 @@ body {
 }
 
 .number {
-    border: 1px solid greenyellow;
+    border: 2px solid greenyellow;
     border-radius: 10px;
+}
+
+.number:hover {
+    background-color: rgb(59, 227, 59);
 }
 
 .operator {
-    border: 1px solid steelblue;
+    border: 2px solid steelblue;
     border-radius: 10px;
+}
+
+.operator:hover {
+    background-color: rgb(12, 138, 234);
 }
 
 .decimal {
-    border: 1px solid gold;
+    border: 2px solid gold;
     border-radius: 10px;
+}
+
+.decimal:hover {
+    background-color: rgb(239, 225, 70);
 }
 
 .equal {
-    border: 1px solid pink;
+    border: 2px solid pink;
     border-radius: 10px;
 }
 
-.clear {
-    border: 1px solid violet;
-    border-radius: 10px;
+.equal:hover {
+    background-color: rgb(219, 39, 120);
 }
 
 .clear {
-    border: 1px solid violet;
+    border: 2px solid violet;
+    border-radius: 10px;
+}
+
+.clear:hover {
+    background-color: rgb(214, 59, 214);
 }
 
 .calculator {
