@@ -30,6 +30,10 @@ clearBtn.addEventListener("click", function() {
     currentScreen.textContent = currentValue;
 })
 
+equalBtn.addEventListener("click", function() {
+    calculate()
+})
+
 
 function handleNumber(num) {
     if(currentValue.length <= 11) {
@@ -43,24 +47,19 @@ function handleOperator(op) {
     currentValue = '';
 }
 
+function calculate() {
+    previousValue = Number(previousValue)
+    currentValue = Number(currentValue)
 
-const add = function(a,b) {
-    return a + b;
-}
-
-const subtract = function(a,b) {
-    return a - b;
-}
-
-const multiply = function(a,b) {
-    return a * b;
-}
-
-const divide = function(a,b) {
-    return a / b;
-}
-
-const operate = () => {
-
+    if(operator === "+") {
+        previousValue += currentValue
+    } else if(operator === "-") {
+        previousValue -= currentValue
+    } else if(operator === "/") {
+        previousValue /= currentValue
+    } else {
+        previousValue *= currentValue
+    }
+    console.log(previousValue)
 }
 
