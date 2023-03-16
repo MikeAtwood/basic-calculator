@@ -42,6 +42,10 @@ equalBtn.addEventListener("click", function () {
     }
 })
 
+decimalBtn.addEventListener("click", function() {
+    addDecimal()
+})
+
 
 function handleNumber(num) {
     if (currentValue.length <= 11) {
@@ -75,4 +79,10 @@ function calculate() {
 
 function roundNumber(num) {
     return Math.round(num * 1000) / 1000;
+}
+
+function addDecimal() {
+    if(!currentValue.includes(".")) {
+        currentValue += ".";
+    }
 }
